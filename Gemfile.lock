@@ -1,5 +1,5 @@
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     activesupport (4.0.5)
       i18n (~> 0.6, >= 0.6.9)
@@ -14,6 +14,7 @@ GEM
       sass (~> 3.2)
       thor
     chunky_png (1.3.1)
+    coderay (1.1.0)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
@@ -60,6 +61,7 @@ GEM
       rb-fsevent (>= 0.9.3)
       rb-inotify (>= 0.9)
       rb-kqueue (>= 0.2)
+    method_source (0.8.2)
     middleman (3.3.2)
       coffee-script (~> 2.2.0)
       compass (>= 0.12.4)
@@ -107,6 +109,10 @@ GEM
       tilt (~> 1.4.1)
     padrino-support (0.12.2)
       activesupport (>= 3.1)
+    pry (0.10.3)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
     rack (1.5.2)
     rack-livereload (0.3.15)
       rack
@@ -141,6 +147,7 @@ GEM
       rack (~> 1.4)
       rack-protection (~> 1.4)
       tilt (~> 1.3, >= 1.3.4)
+    slop (3.6.0)
     sprite-factory (1.6.0)
     sprockets (2.12.1)
       hike (~> 1.2)
@@ -181,6 +188,7 @@ DEPENDENCIES
   middleman (~> 3.3.2)
   middleman-livereload (~> 3.1.0)
   neat
+  pry
   rack-test
   rake
   rest-client
@@ -190,3 +198,6 @@ DEPENDENCIES
   sprite-factory
   thin
   threadify
+
+BUNDLED WITH
+   1.10.6

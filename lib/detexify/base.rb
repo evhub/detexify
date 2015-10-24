@@ -1,5 +1,6 @@
 require 'json'
 require 'sinatra/base'
+require 'pry'
 
 module Detexify
 
@@ -25,6 +26,7 @@ module Detexify
     end
 
     post '/classify' do
+      puts "Contact!"
       strokes = validate_strokes
       rawhits = settings.classifier.classify JSON(strokes)
       nohits = syms - rawhits.map { |hit| hit[:id].to_sym }
@@ -39,6 +41,7 @@ module Detexify
       end
       # response
       content_type 'application/json'
+      binding.pry
       status 200
       puts JSON(hits)
       JSON(hits)

@@ -10,6 +10,7 @@ gem "armchair"
 gem "couchrest"
 gem "threadify"
 gem "thin" # for deployment on heroku
+gem "pry"
 
 group :test do
   gem "rspec"
