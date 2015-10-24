@@ -40,6 +40,7 @@ module Detexify
       # response
       content_type 'application/json'
       status 200
+      puts JSON(hits)
       JSON(hits)
     end
 
