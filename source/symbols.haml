@@ -6,42 +6,9 @@ body_classes: symbols
 js: symbols
 ---
 #symbols
-  #symbols--ad
-    :plain
-      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-      <!-- Detexify upper -->
-      <ins class="adsbygoogle"
-           style="display:inline-block;width:320px;height:50px"
-           data-ad-client="ca-pub-7217292717360456"
-           data-ad-slot="2804888725"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   %header
-    %nav
-      %ul.nav
-        %li.classify
-          %a{:href => "/classify.html"} classify
-        %li.symbols
-          %a{:href => "/symbols.html"} symbols
-    %h1 Detexify
+    %h1 DeTeXiPi
     %h2 Symbol table
-  #symbols--fixer
-  #symbols--info-area
-    %h2 What is this?
-    %p
-      This is the symbol table. Supported symbols are listed here (alphabetically).
-    %p
-      %strike
-        Symbols can also be trained here. Just pick a symbol you sometimes need but tend to forget and click it. A canvas will open for your training input.
-    %p
-      If there are symbols missing
-      drop me a line or create a
-      = succeed '.' do
-        %a(href="https://github.com/kirel/detexify#adding-symbols") pull-request
-      If you have more specific LaTeX questions though, you will have more success contacting your
-      %a{:href => "http://www.tug.org/usergroups.html"} TeX user group
-      or try the excellent
-      = succeed "." do
-        %a{:href => "http://tex.stackexchange.com/"} TeX Stackexchange
   #symbols--list-area
     #symbols--controls
       #sort
@@ -55,6 +22,6 @@ js: symbols
         %input{:type => "text"}/
     #symbols--loading
       .spinner
-      loading...
+      Loading...
     %ul#symbols-list.symbol-list
     %a#up{:href => "#"} up ↑

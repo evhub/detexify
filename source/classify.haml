@@ -6,122 +6,19 @@ body_classes: classify
 js: classify
 ---
 #classify
-  #classify--ad
-    :plain
-      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-      <!-- Detexify upper -->
-      <ins class="adsbygoogle"
-           style="display:inline-block;width:320px;height:50px"
-           data-ad-client="ca-pub-7217292717360456"
-           data-ad-slot="2804888725"></ins>
-      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
   %header
-    %nav
-      %ul.nav
-        %li.classify
-          %a{:href => "/classify.html"} classify
-        %li.symbols
-          %a{:href => "/symbols.html"} symbols
-    %h1 Detexify
+    %h1 DeTeXiPi
   #classify--canvas-area
     #tafel.canvas
     #drawhere
     %a#clear{:href => "#", title: 'clear'}
-    #canvaserror This canvas is fubar :(
+    #canvaserror Something's wrong.
   #classify--hits
     #hits--loading
       .spinner
-      loading...
+      Loading...
     #hits--loaded
       %ul#classify--hit--list.symbol-list
       #showmore
-        The symbol is not in the list?
+        Could not find symbol.
         %a#more{:href => "#"} Show more
-      #donate
-        %h3
-          Did this help?
-        %p Hosting Detexify costs money and if it helps you may consider helping to pay the hosting bill.
-        .donate-buttons
-          .paypal= partial 'paypal'
-          .flattr
-            %a.FlattrButton{:href => "http://detexify.kirelabs.org", :style => "display:none;", rev: "flattr;button:compact;"}
-          .gratipay
-            %script(data-gratipay-username="kirel" data-gratipay-widget="button" src="//gttp.co/v1.js")
-  #classify--info-area
-    %h2 Want a desktop app?
-    %p
-      Please fill out this mini-survey!
-      %a(href="http://goo.gl/forms/K0zoCpfhVq" target="_new" onlick="trackOutboundLink('http://goo.gl/forms/K0zoCpfhVq'); return false;") http://goo.gl/forms/K0zoCpfhVq
-      :javascript
-        var trackOutboundLink = function(url) {
-           ga('send', 'event', 'outbound', 'click', url, {'hitCallback':
-             function () {
-               document.location = url;
-             }
-           });
-        }
-    %h2 What is this?
-    %p
-      Anyone who works with LaTeX knows how time-consuming it can be
-      to find a symbol in
-      %a{:href => "http://www.ctan.org/tex-archive/info/symbols/comprehensive/"} symbols-a4.pdf
-      that you just can't memorize. Detexify is an attempt to simplify this search.
-    %h2 How do I use it?
-    %p
-      Just draw the symbol you are looking for into the square area above and look what happens!
-    %h2 My symbol isn't found!
-    %p
-      The symbol may not be trained enough
-      or it is not yet in the list of supported symbols.
-      %strike In the first case you can do the training yourself.
-      In the second case just drop me a line (mail@danielkirs.ch)!
-      %em I am rewriting parts right now and training isn't functional in this version.
-    %h2 I like this. How can I help?
-    %p
-      %strike You could spare some time training Detexify.
-      You could also look at the source of the
-      %a{:href => "http://github.com/kirel/detexify"} frontend
-      and
-      %a{:href => "https://github.com/kirel/detexify-hs-backend"} backend
-      on Github.
-      If you really, really like this
-      you can also donate.
-    .donate-buttons
-      .paypal= partial 'paypal'
-      .flattr
-        %a.FlattrButton{:href => "http://detexify.kirelabs.org", :style => "display:none;", rev: "flattr;button:compact;"}
-      .gratipay
-        %script(data-gratipay-username="kirel" data-gratipay-widget="button" src="//gttp.co/v1.js")
-    %p
-      The backend server is running on <a href="https://www.digitalocean.com/?refcode=2ed6dc53403b">Digital Ocean (referral link)</a>
-      so you can also reduce my hosting costs by using that referral link.
-    %h2 Why should I donate?
-    %p
-      Hosting of detexify costs some money. If Detexify helps you, you might want to help cover these costs.
-    %h2 This doesn't work at all!?
-    %p
-      Be sure you use a modern browser. A recent version of
-      %a(href='http://www.google.com/chrome/') Chrome
-      or
-      %a(href='http://www.mozilla.org/firefox/') Firefox
-      should do the trick.
-    %h2 Do you support Unicode?
-    %p
-      No. Have a look at
-      %a{:href => "http://shapecatcher.com"} http://shapecatcher.com
-      for Unicode.
-    %h2 I am a researcher. Can I use Detexify's training data?
-    %p
-      %a(href='https://github.com/kirel/detexify-data') Yes.
-    %h2 Who created Detexify?
-    %p
-      Philipp Kühl had the initial idea and
-      %a{:href => "http://kirelabs.org"} Daniel Kirsch
-      made it happen.
-    -# #sponsors
-    -#   %ul
-    -#     %li
-    -#       The backend server is sponsored by
-    -#       %br/
-    -#       %a{:href => "http://www.zweitag.de"}
-    -#         = image_tag 'zweitag-logo.png', alt: "Zweitag GmbH"
