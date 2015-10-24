@@ -28,7 +28,9 @@ module Detexify
     post '/classify' do
       puts "Contact!"
       strokes = validate_strokes
+      puts 'Got strokes!'
       rawhits = settings.classifier.classify JSON(strokes)
+      puts 'Got raw hits!'
       nohits = syms - rawhits.map { |hit| hit[:id].to_sym }
       hits = rawhits.map do |hit|
         symbol = settings.symbols[hit[:id].to_sym]
@@ -41,7 +43,6 @@ module Detexify
       end
       # response
       content_type 'application/json'
-      binding.pry
       status 200
       puts JSON(hits)
       JSON(hits)
