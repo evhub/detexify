@@ -10,9 +10,9 @@ $ ->
   active = 0
   sentstrokes = 0
   latex_classifier = new Detexify(baseuri: "/api/")
-  listElement = $('#classify--hit--list')
 
   classify = (strokes) ->
+    console.log("Classifying!")
     abort = false
     active = active + 1
     updateWorkingIndicatorClass(active)

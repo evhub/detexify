@@ -25,6 +25,7 @@ module Detexify
     end
 
     post '/classify' do
+      puts "Classifying!"
       strokes = validate_strokes
       rawhits = settings.classifier.classify JSON(strokes)
       nohits = syms - rawhits.map { |hit| hit[:id].to_sym }
